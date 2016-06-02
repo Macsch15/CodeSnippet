@@ -2,7 +2,7 @@
 CodeSnippet - get code snippet from file (helpful on exceptions page for example)
 
 ###Requirements
-- PHP 5.4 (or above)
+- PHP 5.5 (or above)
 - Composer
 - PHPUnit (for automated testing)
 
