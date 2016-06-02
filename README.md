@@ -1,5 +1,5 @@
 ###CodeSnippet
-CodeSnippet - get some code lines from file (helpful on exceptions page for example)
+CodeSnippet - get code snippet from file (helpful on exceptions page for example)
 
 ###Requirements
 - PHP 5.4 (or above)
