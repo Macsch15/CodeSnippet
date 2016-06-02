@@ -1,0 +1,24 @@
+{
+    "name": "macsch15/codesnippet",
+    "type": "library",
+    "description": "CodeSnippet - get some code lines from file",
+    "keywords": ["snippet", "code", "codesnippet"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maciej Schmidt"
+        }
+    ],
+
+    "require": {
+        "php": ">=5.4"
+    },
+
+    "require-dev": {
+        "satooshi/php-coveralls": "dev-master"
+    },
+
+    "autoload": {
+        "psr-4": { "CodeSnippet\\": "src/" }
+    }
+}
