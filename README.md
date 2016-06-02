@@ -1,5 +1,5 @@
 ###CodeSnippet [![Build Status](https://travis-ci.org/Macsch15/CodeSnippet.svg?branch=master)](https://travis-ci.org/Macsch15/CodeSnippet) [![Coverage Status](https://coveralls.io/repos/github/Macsch15/CodeSnippet/badge.svg?branch=master)](https://coveralls.io/github/Macsch15/CodeSnippet?branch=master)
-CodeSnippet - get code snippet from file (helpful on exceptions page for example)
+CodeSnippet - get code snippet from file (helpful for exception handlers for example)
 
 ###Requirements
 - PHP 5.5 (or above)
