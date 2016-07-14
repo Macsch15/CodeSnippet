@@ -122,11 +122,12 @@ class Snippet
      * Return lines as json
      *
      * @param bool $trim
+     * @param integer $options
      * @return string
      */
-    public function toJson($trim = false)
+    public function toJson($trim = false, $options = 0)
     {
-        return json_encode($this->toArray($trim));
+        return json_encode($this->toArray($trim), $options);
     }
 
     /**
