@@ -30,7 +30,7 @@ Available return methods:
 public function toArray($trim = false)
 ```
 ```php
-public function toJson($trim = false)
+public function toJson($trim = false, $options = 0)
 ```
 ```php
 public function toString($new_line = '\n', $trim = false)
