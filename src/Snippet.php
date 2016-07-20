@@ -45,7 +45,7 @@ class Snippet
     public function getFilename()
     {
         if (file_exists($this->file) === false) {
-            throw new NotFoundException('File "' . $this->file . '" not found');
+            throw new NotFoundException(sprintf('File "%s" not found', $this->file));
         }
 
         return $this->file;    
@@ -61,7 +61,8 @@ class Snippet
     public function start($start)
     {
         if (is_integer($start) === false) {
-            throw new InvalidArgumentException();
+            throw new InvalidArgumentException(
+                sprintf('$start must be an integer (current type: %s)', gettype($start)));
         }
 
         $this->start = abs($start);
@@ -89,7 +90,8 @@ class Snippet
     public function length($length)
     {
         if (is_integer($length) === false) {
-            throw new InvalidArgumentException();
+            throw new InvalidArgumentException(
+                sprintf('$length must be an integer (current type: %s)', gettype($length)));
         }
 
         $this->length = abs($length);
