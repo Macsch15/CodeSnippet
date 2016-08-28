@@ -8,7 +8,7 @@ CodeSnippet - get code snippet from file (helpful for exception handlers for exa
 
 ###Usage
 ```
-$ composer require macsch15/codesnippet dev-master
+$ composer require macsch15/codesnippet 1.1.*
 ```
 
 ```php
@@ -49,7 +49,7 @@ public function getFilename()
 
 ###Unit testing
 ```
-$ composer install --dev
+$ composer install
 $ phpunit
 ```
 
