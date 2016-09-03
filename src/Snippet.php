@@ -1,8 +1,9 @@
 <?php
+
 namespace CodeSnippet;
 
-use CodeSnippet\Exceptions\NotFoundException;
 use CodeSnippet\Exceptions\InvalidArgumentException;
+use CodeSnippet\Exceptions\NotFoundException;
 use SplFileObject;
 
 class Snippet
@@ -13,20 +14,22 @@ class Snippet
     protected $file = null;
 
     /**
-     * @var integer
+     * @var int
      */
     protected $start = 1;
 
     /**
-     * @var integer
+     * @var int
      */
     protected $length = 1;
 
     /**
-     * Set filename
+     * Set filename.
      *
      * @param string $filename
+     *
      * @throws \Exception
+     *
      * @return CodeSnippet\Snippet
      */
     public function file($filename)
@@ -37,9 +40,10 @@ class Snippet
     }
 
     /**
-     * Get filename
+     * Get filename.
      *
      * @throws CodeSnippet\Exceptions\NotFoundException
+     *
      * @return string
      */
     public function getFilename()
@@ -48,19 +52,21 @@ class Snippet
             throw new NotFoundException(sprintf('File "%s" not found', $this->file));
         }
 
-        return $this->file;    
+        return $this->file;
     }
 
     /**
-     * Set start line
+     * Set start line.
      *
-     * @param integer $start
+     * @param int $start
+     *
      * @throws CodeSnippet\Exceptions\InvalidArgumentException
+     *
      * @return CodeSnippet\Snippet
      */
     public function start($start)
     {
-        if (is_integer($start) === false) {
+        if (is_int($start) === false) {
             throw new InvalidArgumentException(
                 sprintf('$start must be an integer (current type: %s)', gettype($start)));
         }
@@ -71,9 +77,9 @@ class Snippet
     }
 
     /**
-     * Get start line
+     * Get start line.
      *
-     * @return integer
+     * @return int
      */
     public function startsFrom()
     {
@@ -81,15 +87,17 @@ class Snippet
     }
 
     /**
-     * Set length
+     * Set length.
      *
-     * @param integer $length
+     * @param int $length
+     *
      * @throws CodeSnippet\Exceptions\InvalidArgumentException
+     *
      * @return CodeSnippet\Snippet
      */
     public function length($length)
     {
-        if (is_integer($length) === false) {
+        if (is_int($length) === false) {
             throw new InvalidArgumentException(
                 sprintf('$length must be an integer (current type: %s)', gettype($length)));
         }
@@ -100,9 +108,9 @@ class Snippet
     }
 
     /**
-     * Get length
+     * Get length.
      *
-     * @return integer
+     * @return int
      */
     public function getLength()
     {
@@ -110,9 +118,10 @@ class Snippet
     }
 
     /**
-     * Return lines as array
+     * Return lines as array.
      *
      * @param bool $trim
+     *
      * @return array
      */
     public function toArray($trim = false)
@@ -121,10 +130,11 @@ class Snippet
     }
 
     /**
-     * Return lines as json
+     * Return lines as json.
      *
      * @param bool $trim
-     * @param integer $options
+     * @param int  $options
+     *
      * @return string
      */
     public function toJson($trim = false, $options = 0)
@@ -133,10 +143,11 @@ class Snippet
     }
 
     /**
-     * Return lines as string
+     * Return lines as string.
      *
      * @param string $new_line
-     * @param bool $trim
+     * @param bool   $trim
+     *
      * @return string
      */
     public function toString($new_line = "\n", $trim = false)
@@ -145,9 +156,10 @@ class Snippet
     }
 
     /**
-     * Get sliced and trimmed file array
+     * Get sliced and trimmed file array.
      *
      * @param bool $trim
+     *
      * @return array
      */
     protected function getSnippet($trim)
@@ -157,12 +169,12 @@ class Snippet
         if ($trim === true) {
             return array_map('trim', $sliced_array);
         }
-        
-        return $sliced_array;        
+
+        return $sliced_array;
     }
 
     /**
-     * Get raw file array
+     * Get raw file array.
      *
      * @return array
      */
@@ -172,5 +184,5 @@ class Snippet
         array_unshift($file_array, null);
 
         return $file_array;
-    }    
+    }
 }

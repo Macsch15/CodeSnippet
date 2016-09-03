@@ -25,7 +25,7 @@
 
         $snippet = new Snippet();
         $lines = $snippet
-            ->file(__DIR__ . '/stubs/example.stub')
+            ->file(__DIR__.'/stubs/example.stub')
             ->start(23)
             ->length(8)
             ->toString('<br />');

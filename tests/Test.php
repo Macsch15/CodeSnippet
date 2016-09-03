@@ -1,4 +1,5 @@
 <?php
+
 namespace CodeSnippet\Tests;
 
 use CodeSnippet\Snippet;
@@ -27,7 +28,7 @@ class Test extends \PHPUnit_Framework_TestCase
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->toArray();
 
         $this->assertCount(1, $snippet);
@@ -37,7 +38,7 @@ class Test extends \PHPUnit_Framework_TestCase
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->toString(null, true);
 
         $expected = 'func Validate(r io.Reader) {';
@@ -49,7 +50,7 @@ class Test extends \PHPUnit_Framework_TestCase
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->start(4)
             ->toString(null, true);
 
@@ -62,7 +63,7 @@ class Test extends \PHPUnit_Framework_TestCase
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->start(4)
             ->length(3)
             ->toString(null, true);
@@ -76,12 +77,12 @@ class Test extends \PHPUnit_Framework_TestCase
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->start(4)
             ->length(3)
             ->toString("\n", true);
 
-        $expected = <<<CODE
+        $expected = <<<'CODE'
 for ; i < 1<<20 && o < 1<<20; i++ { // test 1mb
 n, err := r.Read(b)
 for i, v := range b[:n] {
@@ -94,12 +95,12 @@ CODE;
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->start(4)
             ->length(3)
             ->toString(null);
 
-        $expected = <<<CODE
+        $expected = <<<'CODE'
     for ; i < 1<<20 && o < 1<<20; i++ { // test 1mb
         n, err := r.Read(b)
         for i, v := range b[:n] {
@@ -113,10 +114,10 @@ CODE;
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->toString();
 
-        $expected = __DIR__ . '/fixtures/test_code.go';
+        $expected = __DIR__.'/fixtures/test_code.go';
 
         $this->assertSame($expected, $this->snippet->getFilename());
     }
@@ -125,7 +126,7 @@ CODE;
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->start(6)
             ->toString();
 
@@ -138,7 +139,7 @@ CODE;
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->length(3)
             ->toString();
 
@@ -151,7 +152,7 @@ CODE;
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->toArray(true);
 
         $expected = [1 => 'func Validate(r io.Reader) {'];
@@ -163,7 +164,7 @@ CODE;
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->toJson(true);
 
         $expected = '{"1":"func Validate(r io.Reader) {"}';
@@ -178,7 +179,7 @@ CODE;
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->start('foo')
             ->toJson(true);
     }
@@ -190,7 +191,7 @@ CODE;
     {
         $snippet = $this
             ->snippet
-            ->file(__DIR__ . '/fixtures/test_code.go')
+            ->file(__DIR__.'/fixtures/test_code.go')
             ->length('foo')
             ->toJson(true);
     }
