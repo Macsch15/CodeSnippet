@@ -24,7 +24,7 @@
 
         $snippet = new Snippet();
         $lines = $snippet
-            ->file(__DIR__ . '/stubs/example.stub')
+            ->file(__DIR__.'/stubs/example.stub')
             ->start(23)
             ->length(8)
             ->toArray();
@@ -35,14 +35,14 @@
 
         <div class="container">
             <pre><code><?php foreach ($lines as $line_number => $line) {
-                $line = $line_number . '. ' . $line;
+            $line = $line_number.'. '.$line;
 
-                if ($line_number == 28) {
-                    $line = '<span style="background:red; color: #fff;">' . $line . '</span>';
-                }
+            if ($line_number == 28) {
+                $line = '<span style="background:red; color: #fff;">'.$line.'</span>';
+            }
 
-                echo $line;
-            } ?></code></pre>
+            echo $line;
+        } ?></code></pre>
         </div>
     </body>
 </html>
