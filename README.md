@@ -1,12 +1,12 @@
-###CodeSnippet [![Build Status](https://travis-ci.org/Macsch15/CodeSnippet.svg?branch=master)](https://travis-ci.org/Macsch15/CodeSnippet) [![Coverage Status](https://coveralls.io/repos/github/Macsch15/CodeSnippet/badge.svg?branch=master)](https://coveralls.io/github/Macsch15/CodeSnippet?branch=master)
+### CodeSnippet [![Build Status](https://travis-ci.org/Macsch15/CodeSnippet.svg?branch=master)](https://travis-ci.org/Macsch15/CodeSnippet) [![Coverage Status](https://coveralls.io/repos/github/Macsch15/CodeSnippet/badge.svg?branch=master)](https://coveralls.io/github/Macsch15/CodeSnippet?branch=master)
 CodeSnippet - get code snippet from file (helpful for exception handlers for example)
 
-###Requirements
+### Requirements
 - PHP 5.5 (or above)
 - Composer
 - PHPUnit (for automated testing)
 
-###Usage
+### Usage
 ```
 $ composer require macsch15/codesnippet 1.1.*
 ```
@@ -47,13 +47,19 @@ public function getLength()
 public function getFilename()
 ```
 
-###Unit testing
+### Unit testing
 ```
 $ composer install
 $ phpunit
 ```
 
-###MIT Licence
+## Author
+**Maciej Schmidt**
+- [Homepage](http://www.macsch15.pl/ "Homepage")
+- [Twitter](https://twitter.com/Macsch15 "Twitter")
+- [Donate with PayPal](https://www.paypal.me/MaciejSchmidt "Donate with PayPal")
+
+### MIT Licence
 
 Copyright (c) 2016 Maciej Schmidt
 
