@@ -1,4 +1,5 @@
 <?php
+
 namespace CodeSnippet\Tests;
 
 use CodeSnippet\Snippet;
