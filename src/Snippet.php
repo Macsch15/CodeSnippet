@@ -1,4 +1,5 @@
 <?php
+
 namespace CodeSnippet;
 
 use CodeSnippet\Exceptions\InvalidArgumentException;
