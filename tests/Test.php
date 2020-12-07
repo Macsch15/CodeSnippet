@@ -9,7 +9,7 @@ class Test extends TestCase
 {
     protected $snippet;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->snippet = new Snippet();
     }
