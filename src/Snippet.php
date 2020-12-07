@@ -68,7 +68,8 @@ class Snippet
     {
         if (is_int($start) === false) {
             throw new InvalidArgumentException(
-                sprintf('$start must be an integer (current type: %s)', gettype($start)));
+                sprintf('$start must be an integer (current type: %s)', gettype($start))
+            );
         }
 
         $this->start = abs($start);
@@ -99,7 +100,8 @@ class Snippet
     {
         if (is_int($length) === false) {
             throw new InvalidArgumentException(
-                sprintf('$length must be an integer (current type: %s)', gettype($length)));
+                sprintf('$length must be an integer (current type: %s)', gettype($length))
+            );
         }
 
         $this->length = abs($length);
