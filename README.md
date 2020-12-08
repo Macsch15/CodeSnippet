@@ -1,4 +1,4 @@
-### CodeSnippet [![Build Status](https://travis-ci.org/Macsch15/CodeSnippet.svg?branch=master)](https://travis-ci.org/Macsch15/CodeSnippet) [![Coverage Status](https://coveralls.io/repos/github/Macsch15/CodeSnippet/badge.svg?branch=master)](https://coveralls.io/github/Macsch15/CodeSnippet?branch=master)
+### CodeSnippet [![Build Status](https://travis-ci.org/Macsch15/CodeSnippet.svg?branch=master)](https://travis-ci.org/Macsch15/CodeSnippet) [![Coverage Status](https://coveralls.io/repos/github/Macsch15/CodeSnippet/badge.svg?branch=master)](https://coveralls.io/github/Macsch15/CodeSnippet?branch=master) [![StyleCI](https://github.styleci.io/repos/60189874/shield?branch=master)](https://github.styleci.io/repos/60189874?branch=master)
 CodeSnippet - get code snippet from file (helpful for exception handlers for example)
 
 ### Requirements
