@@ -2,9 +2,9 @@
 
 namespace CodeSnippet\Tests;
 
-use CodeSnippet\Snippet;
-use CodeSnippet\Exceptions\NotFoundException;
 use CodeSnippet\Exceptions\InvalidArgumentException;
+use CodeSnippet\Exceptions\NotFoundException;
+use CodeSnippet\Snippet;
 use PHPUnit\Framework\TestCase;
 
 class Test extends TestCase
@@ -19,7 +19,7 @@ class Test extends TestCase
     public function testFileNotExists()
     {
         $this->expectException(NotFoundException::class);
-        
+
         return $this
             ->snippet
             ->file('notFound.ext')
@@ -177,7 +177,7 @@ CODE;
     public function testNotValidStartArgument()
     {
         $this->expectException(InvalidArgumentException::class);
-        
+
         $snippet = $this
             ->snippet
             ->file(__DIR__.'/fixtures/test_code.go')
@@ -188,7 +188,7 @@ CODE;
     public function testNotValidLengthArgument()
     {
         $this->expectException(InvalidArgumentException::class);
-        
+
         $snippet = $this
             ->snippet
             ->file(__DIR__.'/fixtures/test_code.go')
